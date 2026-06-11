@@ -4,33 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Návody a prístup k e-mailu</title>
-  <meta name="description" content="Jednoduchá stránka pre zdieľanie návodov k 2FA a Outlooku." />
   <style>
-    :root {
-      --bg: #f5f2ec;
-      --surface: rgba(255,255,255,0.82);
-      --text: #16233b;
-      --muted: #606979;
-      --border: rgba(22,35,59,0.08);
-      --primary: #0f827b;
-      --primary-hover: #0b6c66;
-      --shadow: 0 10px 30px rgba(40, 44, 52, 0.08);
-      --radius: 22px;
-      --max: 1120px;
+    :root { --bg:#f5f2ec; --surface:rgba(255,255,255,.82); --text:#16233b; --muted:#606979; --border:rgba(22,35,59,.08); --primary:#0f827b; --primary-hover:#0b6c66; --shadow:0 10px 30px rgba(40,44,52,.08); --radius:22px; --max:1120px; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+    .wrap{max-width:var(--max);margin:0 auto;padding:18px 22px 48px}
+    .hero{padding:6px 0 24px}
+    h1{margin:0 0 16px;font-size:clamp(2.2rem,7vw,5.2rem);line-height:.95;font-weight:800;letter-spacing:-.04em;max-width:10ch;overflow-wrap:anywhere}
+    .lead{margin:0;max-width:42rem;font-size:clamp(1.02rem,2.5vw,1.2rem);line-height:1.55;color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:10px}
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px 18px 18px;box-shadow:var(--shadow);min-height:0}
+    .card h2{margin:0 0 10px;font-size:1.15rem;font-weight:800}
+    .card p{margin:0 0 18px;color:var(--muted)}
+    .button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border-radius:14px;background:var(--primary);color:#fff;text-decoration:none;font-weight:800;transition:background .2s ease;width:fit-content}
+    .button:hover{background:var(--primary-hover)}
+    @media (max-width: 760px){
+      .wrap{padding:14px 12px 32px}
+      .hero{padding-top:4px}
+      .cards{gap:14px}
+      .card{padding:18px}
+      .button{width:100%}
+      h1{max-width:100%;font-size:clamp(2rem,11vw,3.4rem)}
+      .lead{max-width:100%}
     }
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: Inter, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.55; }
-    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 22px 60px; }
-    .hero { padding: 18px 0 28px; }
-    h1 { margin: 0 0 20px; font-size: clamp(1.8rem, 4.8vw, 4.4rem); line-height: .95; font-weight: 800; letter-spacing: -.04em; max-width: none; white-space: nowrap; }
-    .lead { margin: 0; max-width: 34ch; font-size: clamp(1.25rem, 2.2vw, 1.45rem); line-height: 1.55; color: var(--muted); }
-    .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 10px; }
-    .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px 22px 20px; box-shadow: var(--shadow); min-height: 205px; }
-    .card h2 { margin: 0 0 10px; font-size: 1.15rem; font-weight: 800; color: var(--text); }
-    .card p { margin: 0 0 18px; font-size: 1rem; color: var(--muted); max-width: 26ch; }
-    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 18px; border-radius: 14px; background: var(--primary); color: #fff; text-decoration: none; font-size: 1rem; font-weight: 800; transition: background .2s ease; }
-    .button:hover { background: var(--primary-hover); }
-    @media (max-width: 760px) { .wrap { padding: 0 12px 36px; } .hero { padding-top: 8px; } .cards { grid-template-columns: 1fr; } .card { min-height: auto; } }
   </style>
 </head>
 <body>
@@ -39,17 +35,9 @@
       <h1>Návody a prístup k firemnému e-mailu</h1>
       <p class="lead">Táto stránka zhŕňa základné kroky pre prihlásenie do Outlooku, aktiváciu dvojfaktorového overenia cez Microsoft Authenticator a pridanie zdieľaného priečinka v Outlooku.</p>
     </section>
-    <section class="cards" aria-label="PDF návody">
-      <article class="card">
-        <h2>2FA návod</h2>
-        <p>PDF návod pre nastavenie druhého faktora v telefóne pomocou aplikácie Microsoft Authenticator.</p>
-        <a class="button" href="./2fa-navod.html" target="_blank" rel="noopener noreferrer">Otvoriť návod</a>
-      </article>
-      <article class="card">
-        <h2>Pridanie priečinka</h2>
-        <p>PDF návod na pridanie zdieľaného priečinka alebo schránky v Outlooku cez office.com.</p>
-        <a class="button" href="./pridanie-priecinka.html" target="_blank" rel="noopener noreferrer">Otvoriť návod</a>
-      </article>
+    <section class="cards" aria-label="Návody">
+      <article class="card"><h2>2FA návod</h2><p>Interaktívny návod na nastavenie druhého faktora v telefóne pomocou Microsoft Authenticator.</p><a class="button" href="./2fa-navod.html">Otvoriť návod</a></article>
+      <article class="card"><h2>Pridanie priečinka</h2><p>Návod na pridanie zdieľaného priečinka alebo schránky v Outlooku cez office.com.</p><a class="button" href="./pridanie-priecinka.html">Otvoriť návod</a></article>
     </section>
   </main>
 </body>
