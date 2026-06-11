@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2FA návod</title>
+  <style>
+    :root { --bg:#f5f2ec; --text:#16233b; --muted:#5f6878; --border:rgba(22,35,59,.1); --primary:#0f827b; --primary-hover:#0b6c66; --radius:20px; --max:900px; }
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6} .wrap{max-width:var(--max);margin:0 auto;padding:24px 18px 60px} a{text-decoration:none}
+    .back{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:12px;background:#fff;border:1px solid var(--border);color:var(--text);margin-bottom:20px}
+    .hero,.step{background:rgba(255,255,255,.82);border:1px solid var(--border);border-radius:var(--radius);padding:24px;box-shadow:0 10px 30px rgba(40,44,52,.06)}
+    h1{margin:0 0 10px;font-size:clamp(2rem,4vw,3.2rem);line-height:1.05}.lead{margin:0;color:var(--muted);max-width:60ch}.steps{display:grid;gap:16px;margin-top:18px}.step h2{margin:0 0 8px;font-size:1.15rem}.step p{margin:0;color:var(--muted)}
+    .cta{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 16px;border-radius:14px;background:var(--primary);color:#fff;font-weight:700;margin-top:18px}.cta:hover{background:var(--primary-hover)}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="./index.html">Späť na hlavnú stránku</a>
+    <section class="hero">
+      <h1>2FA návod</h1>
+      <p class="lead">Tento návod opisuje zapnutie dvojfaktorového overenia pre firemný účet pomocou aplikácie Microsoft Authenticator.</p>
+      <a class="cta" href="https://office.com" target="_blank" rel="noopener noreferrer">Otvoriť office.com</a>
+    </section>
+    <section class="steps">
+      <article class="step"><h2>Krok 1</h2><p>Prihláste sa do svojho Office účtu na stránke office.com.</p></article>
+      <article class="step"><h2>Krok 2</h2><p>V úvodnom okne kliknite na Next.</p></article>
+      <article class="step"><h2>Krok 3</h2><p>Opäť kliknite na Next pre pridanie druhého faktora do autentifikačnej aplikácie.</p></article>
+      <article class="step"><h2>Krok 4</h2><p>Stiahnite si z Play Store alebo App Store aplikáciu Microsoft Authenticator a otvorte ju.</p></article>
+      <article class="step"><h2>Krok 5</h2><p>Na obrazovke sa zobrazí QR kód. V aplikácii zvoľte Scan a QR code a načítajte zobrazený QR kód.</p></article>
+      <article class="step"><h2>Krok 6</h2><p>Keď sa zobrazí overovacie číslo, potvrďte ho vo vyskakovacom okne v telefóne kliknutím na Yes.</p></article>
+      <article class="step"><h2>Krok 7</h2><p>V počítači dokončite sprievodcu cez Next a nakoniec kliknite na Done.</p></article>
+    </section>
+  </main>
+</body>
+</html>
