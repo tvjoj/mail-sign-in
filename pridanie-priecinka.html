@@ -5,41 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pridanie priečinka</title>
   <style>
-    :root { --bg:#f5f2ec; --text:#16233b; --muted:#5f6878; --border:rgba(22,35,59,.1); --primary:#0f827b; --primary-hover:#0b6c66; --radius:20px; --max:900px; }
-    *{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-    .wrap{max-width:var(--max);margin:0 auto;padding:18px 12px 36px}
-    a{text-decoration:none}
-    .back{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 14px;border-radius:12px;background:#fff;border:1px solid var(--border);color:var(--text);margin-bottom:14px;width:fit-content}
-    .hero,.step{background:rgba(255,255,255,.82);border:1px solid var(--border);border-radius:var(--radius);padding:20px;box-shadow:0 10px 30px rgba(40,44,52,.06)}
-    h1{margin:0 0 10px;font-size:clamp(1.9rem,7vw,3.2rem);line-height:1.05;overflow-wrap:anywhere}
-    .lead{margin:0;color:var(--muted);max-width:60ch}
+    :root { --bg:#f5f2ec; --surface:rgba(255,255,255,.82); --text:#16233b; --muted:#606979; --border:rgba(22,35,59,.08); --primary:#0f827b; --primary-hover:#0b6c66; --shadow:0 10px 30px rgba(40,44,52,.08); --radius:22px; --max:1120px; }
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+    .wrap{max-width:var(--max);margin:0 auto;padding:18px 22px 48px}
+    .hero{padding:6px 0 24px}
+    h1{margin:0 0 16px;font-size:clamp(2.2rem,7vw,5.2rem);line-height:.95;font-weight:800;letter-spacing:-.04em;max-width:10ch;overflow-wrap:anywhere}
+    .lead{margin:0;max-width:42rem;font-size:clamp(1.02rem,2.5vw,1.2rem);line-height:1.55;color:var(--muted)}
+    .cards{display:grid;gap:20px;margin-top:10px}
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px 18px 18px;box-shadow:var(--shadow)}
+    .card h2{margin:0 0 10px;font-size:1.15rem;font-weight:800}
+    .card p{margin:0 0 18px;color:var(--muted)}
+    .button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border-radius:14px;background:var(--primary);color:#fff;text-decoration:none;font-weight:800;transition:background .2s ease;width:fit-content}
+    .button:hover{background:var(--primary-hover)}
+    @media (max-width: 760px){ .wrap{padding:14px 12px 32px} .hero{padding-top:4px} .cards{gap:14px} .card{padding:18px} .button{width:100%} h1{max-width:100%;font-size:clamp(2rem,11vw,3.4rem)} .lead{max-width:100%} }
     .steps{display:grid;gap:12px;margin-top:14px}
+    .step{background:rgba(255,255,255,.82);border:1px solid var(--border);border-radius:18px;padding:18px;box-shadow:var(--shadow)}
     .step h2{margin:0 0 8px;font-size:1.05rem}
     .step p{margin:0;color:var(--muted)}
-    .cta{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 16px;border-radius:14px;background:var(--primary);color:#fff;font-weight:700;margin-top:16px;width:fit-content}
-    .cta:hover{background:var(--primary-hover)}
-    @media (max-width: 760px){
-      .wrap{padding:12px 10px 28px}
-      .hero,.step{padding:16px}
-      .back,.cta{width:100%}
-      h1{font-size:clamp(1.8rem,10vw,2.6rem)}
-    }
   </style>
 </head>
 <body>
   <main class="wrap">
-    <a class="back" href="./index.html">Späť na hlavnú stránku</a>
+    <a class="button" href="./index.html" style="margin-bottom:14px">Späť na hlavnú stránku</a>
     <section class="hero">
       <h1>Pridanie priečinka</h1>
-      <p class="lead">Tento návod vysvetľuje, ako v Outlooku cez office.com pridať zdieľaný priečinok alebo inú schránku.</p>
-      <a class="cta" href="https://outlook.office.com" target="_blank" rel="noopener noreferrer">Otvoriť Outlook</a>
+      <p class="lead">Prihlásime sa cez office.com a otvoríme si Outlook.</p>
     </section>
     <section class="steps">
-      <article class="step"><h2>Krok 1</h2><p>Prihláste sa cez office.com a otvorte Outlook.</p></article>
-      <article class="step"><h2>Krok 2</h2><p>V ľavej časti kliknite pravým tlačidlom na Folders / Priečinky.</p></article>
-      <article class="step"><h2>Krok 3</h2><p>Zvoľte možnosť Add shared folder / Pridať zdieľaný priečinok.</p></article>
-      <article class="step"><h2>Krok 4</h2><p>Zadajte názov alebo e-mailovú adresu schránky, ktorú chcete pridať, a kliknite na Add.</p></article>
-      <article class="step"><h2>Krok 5</h2><p>Nová adresa alebo priečinok sa zobrazí v spodnej časti Outlooku.</p></article>
+      <article class="step"><h2>Strana 1</h2><p>Prihlásime sa cez office.com a otvoríme si Outlook. Klikneme pravý na Folders / Priečinky. Zvolíme Add shared folder / Pridať zdieľaný priečinok.</p></article>
+      <article class="step"><h2>Strana 2</h2><p>Napíšeme názov emailovej adresy, ktorú chceme pridať a klikneme na Add. Nova adresa sa nám zobrazí v spodnej časti Outlooku.</p></article>
     </section>
   </main>
 </body>
